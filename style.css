@@ -1,41 +1,103 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,#0f766e,#1e3a8a);
-    color: white;
+body{
+margin:0;
+font-family:Arial;
+background:#0a1f2e;
+color:white;
 }
 
-header {
-    text-align: center;
-    padding: 40px;
-    background: rgba(0,0,0,0.3);
+header{
+background:#07151f;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:10px 40px;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    background: rgba(0,0,0,0.4);
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
 }
 
-nav a {
-    color: white;
-    padding: 15px 25px;
-    text-decoration: none;
-    font-weight: bold;
+.logo img{
+height:50px;
 }
 
-nav a:hover {
-    background: rgba(255,255,255,0.2);
+nav a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+font-weight:bold;
 }
 
-main {
-    padding: 40px;
-    text-align: center;
+nav a:hover{
+color:#00e0b8;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0,0,0,0.4);
-    margin-top: 40px;
+.discord{
+background:#5865F2;
+padding:8px 15px;
+border-radius:6px;
+}
+
+.hero{
+text-align:center;
+padding:120px 20px;
+background:linear-gradient(135deg,#0f766e,#1e3a8a);
+}
+
+.hero h2{
+font-size:48px;
+}
+
+.hero p{
+max-width:600px;
+margin:auto;
+margin-top:20px;
+}
+
+.joinbtn{
+display:inline-block;
+margin-top:30px;
+padding:15px 30px;
+background:#00e0b8;
+color:black;
+font-weight:bold;
+text-decoration:none;
+border-radius:8px;
+}
+
+.jobs{
+display:flex;
+justify-content:center;
+gap:30px;
+padding:60px;
+flex-wrap:wrap;
+}
+
+.card{
+background:#102b3c;
+padding:30px;
+border-radius:10px;
+width:220px;
+text-align:center;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+background:#163c55;
+}
+
+.card a{
+display:inline-block;
+margin-top:15px;
+color:#00e0b8;
+text-decoration:none;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#07151f;
 }
