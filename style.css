@@ -15,8 +15,7 @@ justify-content:space-between;
 padding:10px 40px;
 position:sticky;
 top:0;
-z-index:100;
-box-shadow:0 0 15px rgba(0,0,0,0.6);
+box-shadow:0 0 20px black;
 }
 
 .logo{
@@ -27,39 +26,31 @@ gap:15px;
 
 .logo img{
 height:50px;
-animation:logoFloat 3s infinite ease-in-out;
+animation:float 3s infinite ease-in-out;
 }
 
-/* LOGO ANIMATION */
-
-@keyframes logoFloat{
+@keyframes float{
 0%{transform:translateY(0px);}
 50%{transform:translateY(-5px);}
 100%{transform:translateY(0px);}
 }
 
-/* NAV LINKS */
-
 nav a{
-position:relative;
 color:white;
 text-decoration:none;
-margin:0 12px;
+margin:0 10px;
 font-weight:bold;
-padding:5px;
-transition:0.3s;
+position:relative;
 }
-
-/* HOVER ANIMATION */
 
 nav a::after{
 content:"";
 position:absolute;
 width:0%;
 height:2px;
+background:#00ffc8;
 left:0;
 bottom:-5px;
-background:#00ffc8;
 transition:0.3s;
 }
 
@@ -71,13 +62,10 @@ nav a:hover{
 color:#00ffc8;
 }
 
-/* DISCORD BUTTON */
-
 .discord{
 background:#5865F2;
-padding:8px 16px;
+padding:8px 15px;
 border-radius:8px;
-transition:0.3s;
 }
 
 .discord:hover{
@@ -90,21 +78,17 @@ transform:scale(1.1);
 text-align:center;
 padding:120px 20px;
 background:linear-gradient(135deg,#0f766e,#1e3a8a);
-box-shadow: inset 0 0 80px rgba(0,0,0,0.6);
 }
 
 .hero h2{
 font-size:48px;
-margin-bottom:20px;
 }
 
 .hero p{
-max-width:650px;
+max-width:600px;
 margin:auto;
-font-size:18px;
+margin-top:20px;
 }
-
-/* JOIN BUTTON */
 
 .joinbtn{
 display:inline-block;
@@ -114,7 +98,7 @@ background:#00ffc8;
 color:black;
 font-weight:bold;
 text-decoration:none;
-border-radius:10px;
+border-radius:8px;
 transition:0.3s;
 }
 
@@ -123,13 +107,13 @@ transform:scale(1.1);
 box-shadow:0 0 20px #00ffc8;
 }
 
-/* JOB CARDS */
+/* JOBS */
 
 .jobs{
 display:flex;
 justify-content:center;
 gap:40px;
-padding:70px;
+padding:60px;
 flex-wrap:wrap;
 }
 
@@ -140,7 +124,6 @@ border-radius:12px;
 width:230px;
 text-align:center;
 transition:0.3s;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
 }
 
 .card img{
@@ -151,11 +134,7 @@ margin-bottom:10px;
 .card:hover{
 transform:translateY(-10px) scale(1.05);
 background:#163c55;
-box-shadow:0 0 25px #00ffc8;
-}
-
-.card h3{
-margin-top:10px;
+box-shadow:0 0 20px #00ffc8;
 }
 
 .card a{
@@ -163,14 +142,10 @@ display:inline-block;
 margin-top:15px;
 color:#00ffc8;
 text-decoration:none;
-font-weight:bold;
 }
-
-/* FOOTER */
 
 footer{
 text-align:center;
 padding:20px;
 background:#07151f;
-margin-top:40px;
 }
