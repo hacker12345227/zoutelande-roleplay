@@ -1,9 +1,11 @@
 body{
 margin:0;
 font-family:Arial;
-background:#0a1f2e;
+background:#08161f;
 color:white;
 }
+
+/* NAVBAR */
 
 header{
 background:#07151f;
@@ -11,6 +13,10 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 padding:10px 40px;
+position:sticky;
+top:0;
+z-index:100;
+box-shadow:0 0 15px rgba(0,0,0,0.6);
 }
 
 .logo{
@@ -21,83 +27,150 @@ gap:15px;
 
 .logo img{
 height:50px;
+animation:logoFloat 3s infinite ease-in-out;
 }
 
+/* LOGO ANIMATION */
+
+@keyframes logoFloat{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-5px);}
+100%{transform:translateY(0px);}
+}
+
+/* NAV LINKS */
+
 nav a{
+position:relative;
 color:white;
 text-decoration:none;
-margin:0 10px;
+margin:0 12px;
 font-weight:bold;
+padding:5px;
+transition:0.3s;
+}
+
+/* HOVER ANIMATION */
+
+nav a::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+left:0;
+bottom:-5px;
+background:#00ffc8;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
 }
 
 nav a:hover{
-color:#00e0b8;
+color:#00ffc8;
 }
+
+/* DISCORD BUTTON */
 
 .discord{
 background:#5865F2;
-padding:8px 15px;
-border-radius:6px;
+padding:8px 16px;
+border-radius:8px;
+transition:0.3s;
 }
+
+.discord:hover{
+transform:scale(1.1);
+}
+
+/* HERO */
 
 .hero{
 text-align:center;
 padding:120px 20px;
 background:linear-gradient(135deg,#0f766e,#1e3a8a);
+box-shadow: inset 0 0 80px rgba(0,0,0,0.6);
 }
 
 .hero h2{
 font-size:48px;
+margin-bottom:20px;
 }
 
 .hero p{
-max-width:600px;
+max-width:650px;
 margin:auto;
-margin-top:20px;
+font-size:18px;
 }
+
+/* JOIN BUTTON */
 
 .joinbtn{
 display:inline-block;
 margin-top:30px;
 padding:15px 30px;
-background:#00e0b8;
+background:#00ffc8;
 color:black;
 font-weight:bold;
 text-decoration:none;
-border-radius:8px;
+border-radius:10px;
+transition:0.3s;
 }
+
+.joinbtn:hover{
+transform:scale(1.1);
+box-shadow:0 0 20px #00ffc8;
+}
+
+/* JOB CARDS */
 
 .jobs{
 display:flex;
 justify-content:center;
-gap:30px;
-padding:60px;
+gap:40px;
+padding:70px;
 flex-wrap:wrap;
 }
 
 .card{
 background:#102b3c;
 padding:30px;
-border-radius:10px;
-width:220px;
+border-radius:12px;
+width:230px;
 text-align:center;
 transition:0.3s;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+.card img{
+height:70px;
+margin-bottom:10px;
 }
 
 .card:hover{
-transform:scale(1.05);
+transform:translateY(-10px) scale(1.05);
 background:#163c55;
+box-shadow:0 0 25px #00ffc8;
+}
+
+.card h3{
+margin-top:10px;
 }
 
 .card a{
 display:inline-block;
 margin-top:15px;
-color:#00e0b8;
+color:#00ffc8;
 text-decoration:none;
+font-weight:bold;
 }
+
+/* FOOTER */
 
 footer{
 text-align:center;
 padding:20px;
 background:#07151f;
+margin-top:40px;
 }
