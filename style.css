@@ -151,3 +151,14 @@ text-align:center;
 padding:20px;
 background:#07151f;
 }
+
+.footer-credit a {
+    color: #005cc8;          /* linkkleur veranderd naar blauw */
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.footer-credit a:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 5px #005cc8; /* hover glow ook blauw */
+}
